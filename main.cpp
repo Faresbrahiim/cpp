@@ -16,10 +16,10 @@ int main() {
     double stdDev = StandardDeviation(variance);
 
    
-    std::cout << "Average: " << average << std::endl;
-    std::cout << "Median: " << median << std::endl;
-    std::cout << "Variance: " << variance << std::endl;
-    std::cout << "Standard Deviation: " << stdDev << std::endl;
+    printf("Average: %.0f\n", average);    
+    printf("Median: %.0f\n", median);      
+    printf("Variance: %.0f\n", variance);
+    printf("Standard Deviation: %.0f\n", stdDev); 
 
 
     delete[] data;
