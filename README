@@ -1,0 +1,67 @@
+# Math Skills Project
+
+## Author
+
+ifares
+
+## Description
+
+This project is a C++ program that performs various mathematical calculations on a dataset. It reads data from a file (`data.txt`), calculates the average, median, variance, and standard deviation, and displays the results.
+
+The program is designed to handle floating-point numbers and provides accurate results for statistical analysis.
+
+## Features
+
+- **Average**: Calculates the mean of the dataset.
+- **Median**: Finds the middle value of the dataset.
+- **Variance**: Measures the spread of the dataset.
+- **Standard Deviation**: Represents the amount of variation in the dataset.
+
+## Requirements
+
+- **C++ Compiler**: Ensure you have a C++ compiler installed (e.g., `g++`).
+- **Input File**: A file named `data.txt` containing one number per line.
+
+## How to Run the Program
+
+### Step 1: Clone the Repository
+
+If you have the project in a repository, clone it to your local machine:
+
+```bash
+# Replace <repository_url> with the actual repository URL
+git clone <repository_url>
+cd <repository_folder>
+```
+
+### Step 2: Compile the Program
+
+Compile the program using `g++`:
+
+```bash
+g++ main.cpp externalFunctions/calcule.cpp -o math-skills
+```
+
+### Step 3: Run the Program
+
+Execute the compiled program:
+
+```bash
+./myprogram
+```
+
+Make sure the `data.txt` file is in the same directory as the program before running it.
+
+### Step 4: Run the Script
+
+If you downloaded the script `mathskills` directly, ensure it is executable by running:
+
+```bash
+chmod +x mathskills
+```
+
+Then execute the script using:
+
+```bash
+./mathskills
+```
