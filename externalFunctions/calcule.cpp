@@ -1,5 +1,6 @@
 #include "calcule.h"
 #include <iostream>
+#include <fstream>
 #include<algorithm>
 #include<math.h>
 
@@ -50,4 +51,47 @@ double Median(double data[], size_t size) {
 
 double StandardDeviation(double variance) {
     return std::sqrt(variance);
+}
+
+
+
+
+/// to bring data
+
+
+
+
+double* ExportData(const std::string& filename, size_t& size) {
+    std::ifstream file(filename);
+    if (!file.is_open()) {
+        std::cerr << "Error: Could not open file " << filename << std::endl;
+        size = 0;
+        return nullptr; 
+    }
+
+
+    size = 0;
+    std::string line;
+    while (std::getline(file, line)) {
+        size++;
+    }
+
+    double* data = new double[size];
+
+    file.clear();
+    file.seekg(0, std::ios::beg);
+
+
+    size_t index = 0;
+    while (std::getline(file, line)) {
+        try {
+            data[index] = std::stod(line); // Convert string to double
+            index++;
+        } catch (const std::invalid_argument& e) {
+            std::cerr << "Error converting string to double: " << line << std::endl;
+        }
+    }
+
+    file.close();
+    return data;
 }
